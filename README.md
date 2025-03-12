@@ -49,11 +49,11 @@ Installation Steps
 4. Run the Backend Server:
    If using Flask:
 
-python app.py
+   python app.py
 
-If using Django:
+   If using Django:
 
-python manage.py runserver
+   python manage.py runserver
 
 5. Open the Frontend:
    Open index.html in your browser or serve it using a local server.
