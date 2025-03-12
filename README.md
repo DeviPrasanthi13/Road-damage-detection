@@ -34,20 +34,20 @@ Installation Steps
 -------------------
 1. Clone the Repository:
 
-git clone https://github.com/your-username/road-damage-detection.git
-cd road-damage-detection
+   git clone https://github.com/your-username/road-damage-detection.git
+   cd road-damage-detection
 
 2. Set Up the Python Environment:
 
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   python -m venv venv
+   source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
 3. Install Dependencies:
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4. Run the Backend Server:
-If using Flask:
+   If using Flask:
 
 python app.py
 
@@ -56,4 +56,4 @@ If using Django:
 python manage.py runserver
 
 5. Open the Frontend:
-Open index.html in your browser or serve it using a local server.
+   Open index.html in your browser or serve it using a local server.
