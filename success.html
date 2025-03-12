@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #login-form {
+            max-width: 300px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #cam-form {
+            max-width: 300px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #success-message {
+            color: #4caf50;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-form">
+        <form onsubmit="return validateForm()" action= "SUB.html" method="get">
+            <div>
+                <!-- <h3>Road Damage Detection</h3> -->
+            <label for="username"><h3>Welcome To Detect</h3></label>
+        </div>
+            <label for="Purpose">Purpose : </label>
+            <input type="Purpose" id="Purpose" name="Purpose" >
+
+            <!-- <label for="fileUpload">Upload File:</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".txt, .pdf, .doc, .docx"> -->
+            <label for="file">Upload Image/Video:</label>
+            
+            <input type="file" name="file" id="file" accept="image/*,video/*" required>
+            <input type="submit" value="Upload Vedio">
+          
+        </form>
+        <div id="success-message"></div>
+    </div>
+    <div id="cam-form">
+        <form onsubmit="return validateForm()" action= "cam.html" method="get">
+            <input type="submit" value="Open Camera"> 
+        </form>
+        <div id="success-message"></div>
+    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+
+            // Check your login conditions here (For simplicity, using hardcoded values)
+            if (Region != null) {
+                // Redirect to the success page
+                window.location.href = 'sub.html';
+                return true;
+            } else {
+                // Display an error message
+                document.getElementById('success-message').innerHTML = 'Invalid username or password.';
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+      
+</body>
+</html>
